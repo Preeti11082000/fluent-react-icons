@@ -4,6 +4,7 @@ import { Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
+import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -73,12 +74,12 @@ const LoginForm = () => {
         </Button>
         
         <div className="text-center">
-          <button
-            type="button"
+          <Link
+            to="/forgot-password"
             className="text-sm text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200"
           >
             Forgot Password?
-          </button>
+          </Link>
         </div>
       </form>
     </div>
