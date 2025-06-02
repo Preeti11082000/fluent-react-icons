@@ -4,7 +4,7 @@ import Sidebar from '@/components/Sidebar';
 import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { search, edit, user, delete } from 'lucide-react';
+import { Search, Edit, User, Trash2 } from 'lucide-react';
 
 const RolesList = () => {
   const roles = [
@@ -31,7 +31,7 @@ const RolesList = () => {
                   Add New Role
                 </Button>
                 <div className="relative">
-                  <search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <Input
                     placeholder="Search"
                     className="pl-10 w-64"
@@ -90,13 +90,13 @@ const RolesList = () => {
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         <div className="flex space-x-2">
                           <button className="text-gray-600 hover:text-gray-900">
-                            <edit className="w-4 h-4" />
+                            <Edit className="w-4 h-4" />
                           </button>
                           <button className="text-gray-600 hover:text-gray-900">
-                            <user className="w-4 h-4" />
+                            <User className="w-4 h-4" />
                           </button>
                           <button className="text-red-600 hover:text-red-900">
-                            <delete className="w-4 h-4" />
+                            <Trash2 className="w-4 h-4" />
                           </button>
                         </div>
                       </td>

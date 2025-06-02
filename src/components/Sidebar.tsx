@@ -1,24 +1,23 @@
 
 import React from 'react';
 import { 
-  layout-dashboard, 
-  book, 
-  users, 
-  bell, 
-  book-open, 
-  activity, 
-  user 
+  LayoutDashboard, 
+  Book, 
+  Users, 
+  Bell, 
+  BookOpen, 
+  Activity 
 } from 'lucide-react';
 
 const Sidebar = () => {
   const menuItems = [
-    { icon: layout-dashboard, label: 'Dashboard', path: '/dashboard', active: false },
-    { icon: book, label: 'Content Management', path: '/content', active: false },
-    { icon: users, label: 'Roles & Permissions', path: '/roles', active: true },
-    { icon: bell, label: 'Notification Management', path: '/notifications', active: false },
-    { icon: book-open, label: 'Banner Management', path: '/banners', active: false },
-    { icon: activity, label: 'Reports and Analytics', path: '/reports', active: false },
-    { icon: activity, label: 'Activity Log', path: '/activity', active: false },
+    { icon: LayoutDashboard, label: 'Dashboard', path: '/dashboard', active: false },
+    { icon: Book, label: 'Content Management', path: '/content', active: false },
+    { icon: Users, label: 'Roles & Permissions', path: '/roles', active: true },
+    { icon: Bell, label: 'Notification Management', path: '/notifications', active: false },
+    { icon: BookOpen, label: 'Banner Management', path: '/banners', active: false },
+    { icon: Activity, label: 'Reports and Analytics', path: '/reports', active: false },
+    { icon: Activity, label: 'Activity Log', path: '/activity', active: false },
   ];
 
   return (

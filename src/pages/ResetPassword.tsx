@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { arrow-left } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import Logo from '@/components/Logo';
 
 const ResetPassword = () => {
@@ -26,7 +26,7 @@ const ResetPassword = () => {
         <div className="w-full max-w-md">
           <div className="mb-8">
             <Button variant="outline" size="icon" className="mb-4">
-              <arrow-left className="w-4 h-4" />
+              <ArrowLeft className="w-4 h-4" />
             </Button>
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Reset Password</h1>
           </div>
