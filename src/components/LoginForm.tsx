@@ -57,7 +57,7 @@ const LoginForm = () => {
           <Checkbox
             id="keep-signed-in"
             checked={keepSignedIn}
-            onCheckedChange={setKeepSignedIn}
+            onCheckedChange={(checked) => setKeepSignedIn(checked === true)}
             className="border-gray-300"
           />
           <label htmlFor="keep-signed-in" className="text-sm text-gray-700 cursor-pointer">
