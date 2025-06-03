@@ -3,20 +3,23 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ESCLogo from '@/components/ESCLogo';
 
 const ResetPassword = () => {
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Reset password:', { newPassword, confirmPassword });
+    // Navigate to success page after form submission
+    navigate('/password-reset-success');
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-200 to-pink-300 flex items-center justify-center p-8">
+    <div className="min-h-screen bg-gradient-to-br from-pink-200 to-pink-300 flex items-center justify-center p-8 font-mulish">
       <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-8">
         <ESCLogo />
         
@@ -60,7 +63,7 @@ const ResetPassword = () => {
             type="submit"
             className="w-full h-12 bg-red-600 hover:bg-red-700 text-white font-medium text-base transition-colors duration-200 rounded-lg"
           >
-            Send Password Reset Link
+            Reset Password
           </Button>
           
           <div className="text-center">
