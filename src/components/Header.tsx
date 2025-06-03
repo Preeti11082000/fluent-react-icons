@@ -4,7 +4,7 @@ import { User, LogOut } from 'lucide-react';
 
 const Header = () => {
   return (
-    <header className="bg-black text-white px-6 py-4">
+    <header className="bg-red-600 text-white px-6 py-4">
       <div className="flex justify-between items-center">
         <h1 className="text-xl font-bold">ESC- Admin</h1>
         <div className="flex items-center space-x-4">
