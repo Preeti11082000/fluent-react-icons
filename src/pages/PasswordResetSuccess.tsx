@@ -7,11 +7,11 @@ const PasswordResetSuccess = () => {
   return (
     <div className="min-h-screen font-mulish" style={{ background: '#EFCFD3' }}>
       {/* Left side with logo */}
-      <div className="fixed left-0 top-0 w-1/2 h-full flex items-center justify-center">
+      <div className="fixed left-0 top-0 w-1/2 h-full flex items-center justify-center" style={{ background: '#EFCFD3' }}>
         <div className="text-center">
           <div className="flex items-center justify-center mb-8">
             <img 
-              src="/lovable-uploads/176f353d-5693-4bcd-ba2e-96594b1d5527.png" 
+              src="/lovable-uploads/60ad7311-9fea-4dfa-a541-807a34f06118.png" 
               alt="ESC Logo" 
               className="w-80 h-auto"
             />

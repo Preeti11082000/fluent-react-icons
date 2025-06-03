@@ -93,11 +93,11 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border font-mulish;
   }
 
   body {
     @apply bg-background text-foreground font-mulish;
-    background: #EFCFD3;
+    background: #EFCFD3 !important;
   }
 }
