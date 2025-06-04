@@ -8,6 +8,7 @@ import ReduxProvider from "./components/ReduxProvider";
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import RolesList from "./pages/RolesList";
+import AddNewRole from "./pages/AddNewRole";
 import ResetPassword from "./pages/ResetPassword";
 import ForgotPassword from "./pages/ForgotPassword";
 import PasswordResetSuccess from "./pages/PasswordResetSuccess";
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/roles" element={<RolesList />} />
+            <Route path="/roles/add" element={<AddNewRole />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/password-reset-success" element={<PasswordResetSuccess />} />

@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Search, Edit, User, Trash2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const RolesList = () => {
   const roles = [
@@ -27,9 +28,11 @@ const RolesList = () => {
           <div className="bg-white rounded-lg shadow-sm">
             <div className="p-6 border-b border-gray-200">
               <div className="flex justify-between items-center">
-                <Button className="bg-gray-600 hover:bg-gray-700">
-                  Add New Role
-                </Button>
+                <Link to="/roles/add">
+                  <Button className="bg-gray-600 hover:bg-gray-700">
+                    Add New Role
+                  </Button>
+                </Link>
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <Input

@@ -2,19 +2,10 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { 
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
 
 const RolePermissionForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [role, setRole] = useState('');
+  const [roleName, setRoleName] = useState('Sub Admin');
 
   const modules = [
     'Dashboard',
@@ -28,61 +19,36 @@ const RolePermissionForm = () => {
   const permissions = ['View List', 'Edit', 'Add', 'Delete', 'Active/Blocked'];
 
   return (
-    <div className="bg-white p-6">
-      <div className="mb-6">
-        <nav className="text-sm text-gray-600">
+    <div className="bg-white p-8 m-6 rounded-lg font-mulish">
+      <div className="mb-8">
+        <nav className="text-sm text-gray-600 mb-4">
           <span>Roles & Permissions</span>
           <span className="mx-2">/</span>
           <span>Add New Role</span>
         </nav>
-        <h1 className="text-2xl font-bold mt-2">Roles & Permissions</h1>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
-          <Input
-            placeholder="Add Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="w-full"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">Email ID</label>
-          <Input
-            placeholder="Add Email Id"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full"
-          />
-        </div>
+        <h1 className="text-2xl font-bold text-gray-800">Roles & Permissions</h1>
       </div>
 
       <div className="mb-8">
-        <label className="block text-sm font-medium text-gray-700 mb-2">Role</label>
-        <Select value={role} onValueChange={setRole}>
-          <SelectTrigger className="w-full md:w-64">
-            <SelectValue placeholder="Sub Admin" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="sub-admin">Sub Admin</SelectItem>
-            <SelectItem value="content-manager">Content Manager</SelectItem>
-            <SelectItem value="executive">Executive</SelectItem>
-            <SelectItem value="marketing">Marketing</SelectItem>
-          </SelectContent>
-        </Select>
+        <label className="block text-lg font-medium text-gray-800 mb-4">Role Name</label>
+        <Input
+          value={roleName}
+          onChange={(e) => setRoleName(e.target.value)}
+          className="w-96 h-12 text-base border border-gray-300 rounded-md px-4 bg-white focus:border-gray-400 focus:ring-0"
+        />
       </div>
 
       <div className="mb-8">
-        <h2 className="text-lg font-semibold mb-4">Access Permissions:</h2>
+        <h2 className="text-lg font-medium text-gray-800 mb-6">Access Permissions:</h2>
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse">
+          <table className="w-full border-collapse border border-gray-400">
             <thead>
               <tr className="bg-gray-300">
-                <th className="border border-gray-400 px-4 py-3 text-left font-medium">Modules</th>
+                <th className="border border-gray-400 px-6 py-4 text-left font-medium text-gray-800 w-64">
+                  Modules
+                </th>
                 {permissions.map((permission) => (
-                  <th key={permission} className="border border-gray-400 px-4 py-3 text-center font-medium">
+                  <th key={permission} className="border border-gray-400 px-6 py-4 text-center font-medium text-gray-800 w-32">
                     {permission}
                   </th>
                 ))}
@@ -90,16 +56,18 @@ const RolePermissionForm = () => {
             </thead>
             <tbody>
               {modules.map((module, moduleIndex) => (
-                <tr key={moduleIndex} className="border-b">
-                  <td className="border border-gray-400 px-4 py-3 font-medium">
-                    <div className="flex items-center space-x-2">
-                      <Checkbox />
+                <tr key={moduleIndex} className="border-b border-gray-400">
+                  <td className="border border-gray-400 px-6 py-4 font-medium text-gray-800">
+                    <div className="flex items-center space-x-3">
+                      <Checkbox className="w-5 h-5" />
                       <span>{module}</span>
                     </div>
                   </td>
                   {permissions.map((permission, permIndex) => (
-                    <td key={permIndex} className="border border-gray-400 px-4 py-3 text-center">
-                      <Checkbox />
+                    <td key={permIndex} className="border border-gray-400 px-6 py-4 text-center">
+                      <div className="flex justify-center">
+                        <Checkbox className="w-5 h-5" />
+                      </div>
                     </td>
                   ))}
                 </tr>
@@ -109,11 +77,16 @@ const RolePermissionForm = () => {
         </div>
       </div>
 
-      <div className="flex justify-end space-x-4">
-        <Button variant="outline" className="px-8 py-2">
+      <div className="flex justify-end space-x-4 mt-8">
+        <Button 
+          variant="outline" 
+          className="px-8 py-3 text-base border-gray-300 text-gray-700 hover:bg-gray-50 rounded-md"
+        >
           Cancel
         </Button>
-        <Button className="bg-gray-600 hover:bg-gray-700 px-8 py-2">
+        <Button 
+          className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-3 text-base rounded-md"
+        >
           Save
         </Button>
       </div>
