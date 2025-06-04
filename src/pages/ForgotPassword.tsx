@@ -17,7 +17,16 @@ const ForgotPassword = () => {
   return (
     <div className="min-h-screen font-mulish" style={{ background: '#EFCFD3' }}>
       <div className="flex items-center justify-center p-8">
-        <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-8">
+        <div 
+          className="bg-white rounded-xl shadow-lg p-8"
+          style={{
+            width: '669px',
+            height: '494px',
+            position: 'absolute',
+            top: '195px',
+            left: '295px'
+          }}
+        >
           <ESCLogo />
           
           <div className="mb-8">
@@ -27,7 +36,7 @@ const ForgotPassword = () => {
             </Link>
           </div>
           
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} noValidate className="space-y-6">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email Address
@@ -38,7 +47,6 @@ const ForgotPassword = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="h-12 text-base border-gray-200 bg-gray-50 focus:border-red-500 focus:ring-red-500"
-                required
               />
             </div>
             

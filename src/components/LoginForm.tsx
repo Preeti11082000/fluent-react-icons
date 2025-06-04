@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -90,7 +89,7 @@ const LoginForm = () => {
         <h1 className="text-2xl font-semibold text-gray-900 mb-2">Welcome Back !</h1>
       </div>
       
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} noValidate className="space-y-6">
         <div className="space-y-2">
           <Input
             type="email"
@@ -101,7 +100,6 @@ const LoginForm = () => {
             className={`h-14 text-base bg-gray-50 border-0 focus:border-0 focus:ring-0 focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-gray-500 ${
               errors.email && touched.email ? 'bg-red-50' : ''
             }`}
-            required
           />
           {errors.email && touched.email && (
             <p className="text-sm text-red-600 mt-1">{errors.email}</p>
@@ -119,7 +117,6 @@ const LoginForm = () => {
               className={`h-14 text-base bg-gray-50 border-0 focus:border-0 focus:ring-0 focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-gray-500 pr-12 ${
                 errors.password && touched.password ? 'bg-red-50' : ''
               }`}
-              required
             />
             <button
               type="button"
