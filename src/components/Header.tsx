@@ -1,12 +1,24 @@
 
 import React from 'react';
-import { User, LogOut } from 'lucide-react';
+import { User, LogOut, Menu } from 'lucide-react';
 
-const Header = () => {
+interface HeaderProps {
+  onMenuClick?: () => void;
+}
+
+const Header = ({ onMenuClick }: HeaderProps) => {
   return (
-    <header className="bg-red-600 text-white px-6 py-4">
+    <header className="bg-black text-white px-6 py-4 flex-shrink-0">
       <div className="flex justify-between items-center">
-        <h1 className="text-xl font-bold">ESC- Admin</h1>
+        <div className="flex items-center space-x-4">
+          <button
+            onClick={onMenuClick}
+            className="lg:hidden text-white hover:text-gray-300"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
+          <h1 className="text-xl font-bold">ESC- Admin</h1>
+        </div>
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
             <User className="w-5 h-5" />
