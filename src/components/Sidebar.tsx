@@ -52,7 +52,7 @@ const Sidebar = () => {
       } lg:relative lg:z-auto font-mulish`}>
         
         {/* Sidebar Header */}
-        <div className="bg-black text-white p-4 flex items-center justify-between">
+        <div className="bg-[#DC2626] text-white p-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="bg-white rounded p-1">
               <div className="w-6 h-6 bg-red-500 rounded"></div>
@@ -75,7 +75,7 @@ const Sidebar = () => {
               to={item.path}
               className={`flex items-center space-x-3 px-4 py-4 text-sm font-medium transition-colors duration-200 border-b border-gray-100 ${
                 isActiveRoute(item.path)
-                  ? 'bg-black text-white' 
+                  ? 'bg-[#DC2626] text-white' 
                   : 'text-gray-700 hover:bg-gray-50'
               }`}
               onClick={() => {
@@ -93,11 +93,11 @@ const Sidebar = () => {
         </nav>
       </div>
 
-      {/* Toggle button for desktop */}
+      {/* Toggle button for desktop when sidebar is closed */}
       {!isOpen && (
         <button
           onClick={toggleSidebar}
-          className="fixed top-4 left-4 z-40 bg-black text-white p-2 rounded-md shadow-lg lg:block hidden"
+          className="fixed top-4 left-4 z-40 bg-[#DC2626] text-white p-2 rounded-md shadow-lg lg:block hidden hover:bg-red-700 transition-colors"
         >
           <Menu className="w-6 h-6" />
         </button>

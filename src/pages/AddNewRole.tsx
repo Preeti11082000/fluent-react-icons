@@ -17,7 +17,11 @@ const AddNewRole = () => {
     <div className="flex min-h-screen bg-gray-50 font-mulish">
       <Sidebar />
       <div className="flex-1 flex flex-col overflow-hidden">
-        <Header onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
+        <Header 
+          onMenuClick={() => setSidebarOpen(!sidebarOpen)} 
+          sidebarOpen={sidebarOpen}
+          setSidebarOpen={setSidebarOpen}
+        />
         <main className="flex-1 overflow-x-hidden overflow-y-auto">
           <div className="p-6">
             <Breadcrumb items={breadcrumbItems} />
